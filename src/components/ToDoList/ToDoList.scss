@@ -1,0 +1,313 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.todo_first{
+    display: flex;
+    align-items: flex-end;
+    height: 75vh;
+    // border: 2px solid red ;
+    img{
+        height: 47%;
+        @media screen and (max-width: 1438px) {
+            display: none;
+        }
+    }
+    
+}
+.todo_second{
+    display: flex;
+    align-items: flex-start;
+    height: 75vh;
+    // border: 2px solid red ;
+    img{
+        height: 47%;
+        @media screen and (max-width: 1000px) {
+            height: 27%;
+            // width: 70%;
+        }
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
+    }
+}
+
+.app__todo{
+    // rgb(211 32 101)
+    // rgb(150 52 234)
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    // border: 2px solid red;
+    align-items: center;
+    background: -webkit-linear-gradient(65deg, white 50%, transparent 50%),
+            linear-gradient(to right, rgb(211 32 101), rgb(150 52 234));
+
+    // background-image: linear-gradient(to right, rgb(211 32 101) , rgb(150 52 234));
+}
+
+.toDo_main{
+    // border: 2px solid red;
+    overflow-y: auto;
+    width: 40%;
+    height: 75vh;
+    border-radius: 12px;
+    padding: 1rem;
+    background-color: rgb(56, 65, 82,1);
+    @media screen and (max-width: 1438px) {
+        width: 60%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 70%;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 80%;
+    }
+    
+    .task_input_heading{
+        font-size: xx-large;
+        color: rgb(85, 93, 109,1);
+    }
+    
+    .task_input{
+        display: flex;
+        
+        .input_desc{
+            resize: none;
+            width: 80%;
+            height: 5.2rem;
+            border-radius: 12px;
+            margin-top:-8px;
+            padding: 12px;
+            background-color: rgb(32 41 56);
+            font-size: medium;
+            outline: none;
+            border: none;
+            color: rgb(211, 210, 210);
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            // @media screen and (max-width: 715px) {
+            //     width: 60%;
+            //     font-size: small;
+            //     height: 4rem;
+            // }
+        }
+
+        .temp-2{
+            // display:flex;
+            width: 90%;
+            // border: 2px solid red;
+        }
+        
+        .input_title{
+            width: 98%;
+            height: 2.2rem;
+            border-radius: 12px;
+            margin: 1rem 0px;
+            padding: 12px;
+            background-color: rgb(32 41 56);
+            font-size: large;
+            outline: none;
+            border: none;
+            color: rgb(211, 210, 210);
+            // @media screen and (max-width: 715px) {
+            //     width: 70%;
+            //     font-size: medium;
+            // }
+            
+        }
+        @media screen and (max-width: 500px) {
+                flex-direction: column;
+            }
+        
+    }
+    .add_btn {
+        margin-left: 0.5rem;
+        
+        background: linear-gradient(to right, rgb(211 32 101), rgb(150 52 234));
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight:900;
+        background-clip: text; 
+        display: flex;
+        margin: 1.4rem 2px;
+        justify-content: flex-start;
+        /* For Safari */
+        -webkit-background-clip: text; 
+        color: transparent; 
+        cursor: pointer; 
+        // border: 2px solid blue;
+        width: 6rem;
+      }
+      
+    }
+    .task_list{
+
+        .task_list_top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // border:2px solid red;
+            margin-top: 1rem;
+        }
+
+        .filter_list{
+            background-color: transparent;
+            border: 2px solid rgb(85, 93, 109,1);
+            color: rgb(85, 93, 109,1);
+        }
+
+        .task_list_heading{
+            font-size: x-large;
+            color: rgb(85, 93, 109,1);
+        }
+        ul{
+            list-style: none;
+            .list{
+                width: 100%;
+                display: flex;
+                background-color: rgb(17 24 40);
+                    color: white;
+                    padding: 12px;
+                    margin: 1rem 0px;
+                    border-radius: 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    text-decoration-color: red;
+                    // border: 2px solid white;
+                    li{
+                        width: 100%;
+                    }
+                    
+                    .heading{
+                        width: 100%;
+                        font-size: large;
+                        font-weight: bold;
+                        // border: 2px solid green;
+                        input{
+                            background: transparent;
+                            color: white;
+                            border: 2px solid #555;
+                            border-radius: 6px;
+                            font-size: large;
+                            padding: 3px 5px;
+                            white-space: nowrap;
+                            overflow: hidden; 
+                            text-overflow: ellipsis; 
+                            
+                        }
+                    }
+                    .description{
+                        /* justify-content: flex-start; */
+                        /* align-items: center; */
+                        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-size: small;
+                        color: rgb(165, 165, 165);
+                        // border: 2px solid red;
+                    width: 90%;
+                    height: 4rem;
+                    background-color: transparent;
+                    // border: 2px solid red;
+                    word-wrap: break-word;
+                    // border: none;
+                    resize: none;
+                    border-radius: 7px;
+                    padding: 6px;
+                    margin-top: 0.5rem;
+                }
+                
+                    .temp{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        // border: 2px solid blue;
+                        width: 70%;
+                        img{
+                            height: 1rem;
+                        }
+                        .done_btn{
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                            margin-top: 5px;
+                            margin-right: 10px;
+                        }
+                    }
+                    .btns{
+                        align-items: center;
+                        // border: 2px solid red;
+                        @media screen and (max-width: 500px) {
+                            // width: 70%;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                       
+                        .done_btn{
+                            margin: 0 0.9rem;
+                            background: linear-gradient(to right, rgb(211 32 101), rgb(150 52 234));
+                            outline: none;
+                            border: none;
+                            font-size: 16px;
+                            font-weight:900;
+                            background-clip: text; 
+                            /* For Safari */
+                            -webkit-background-clip: text; 
+                            color: transparent; 
+                            cursor: pointer; 
+                            @media screen and (max-width: 500px) {
+                                // width: 70%;
+                                margin: 5px 10px;
+                                font-size:smaller;
+                            }
+                        }
+                        .delete_btn{
+                            // margin: 0 0.9rem;
+                            // background: linear-gradient(to right, rgb(211 32 101), rgb(150 52 234));
+                            outline: none;
+                            border: none;
+                            font-size: 16px;
+                            font-weight:bold;
+                            background-clip: text; 
+                            /* For Safari */
+                            -webkit-background-clip: text; 
+                            color: rgb(215, 12, 12); 
+                            cursor: pointer; 
+                            @media screen and (max-width: 500px) {
+                                // margin-left;
+                                // width: 70%;
+                                font-size: smaller;
+                            }
+                        }
+                    }
+                }
+            }
+}
+
+
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  /* Track (the area behind the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+  }
+  
+  /* Handle (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the handle */
+    border-radius: 5px; /* Radius of the handle */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the handle on hover */
+  }
+  
