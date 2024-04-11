@@ -50,6 +50,9 @@ const ToDoList: React.FC = () => {
   };
 
   const handleTasks = () => {
+    if(input === ""){
+      alert("Task cannot be empty! Please enter a task");
+    }
     if (input.trim() !== '') {
       setTasks([...tasks, { id: tasks.length + 1, name: input, desc: description, completed: false }]);
       setInput('');

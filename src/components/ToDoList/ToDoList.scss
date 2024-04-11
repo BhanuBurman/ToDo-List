@@ -71,7 +71,7 @@
     
     .task_input_heading{
         font-size: xx-large;
-        color: rgb(85, 93, 109,1);
+        color: white;
     }
     
     .task_input{
@@ -158,13 +158,17 @@
 
         .filter_list{
             background-color: transparent;
-            border: 2px solid rgb(85, 93, 109,1);
-            color: rgb(85, 93, 109,1);
+            border: 2px solid white dashed;
+            border-radius: 5px;
+            color: white;
+            option{
+                color: black;
+            }
         }
 
         .task_list_heading{
             font-size: x-large;
-            color: rgb(85, 93, 109,1);
+            color: white;
         }
         ul{
             list-style: none;
